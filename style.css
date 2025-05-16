@@ -123,6 +123,7 @@ section {
     text-shadow: 4px 4px 7px #fff;
 }
 .show-more-btn {
+    margin-right: 30px;
     position: relative;
     font-size: 1.2em;
     padding: 0.7em 1.4em;

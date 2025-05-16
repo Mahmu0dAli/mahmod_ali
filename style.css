@@ -122,24 +122,109 @@ section {
     margin-bottom: 30px;
     text-shadow: 4px 4px 7px #fff;
 }
+.show-more-btn {
+    position: relative;
+    font-size: 1.2em;
+    padding: 0.7em 1.4em;
+    background-color: #BF0426;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5em;
+    color: #DEDEDE;
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+  }
+  
+  .show-more-btn::before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 50%, rgba(150,4,31,1) 50%, rgba(191,4,38,1) 60%);
+    border-radius: 0 0 0.5em 0;
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+  }
+  
+  .show-more-btn:hover::before {
+    width: 1.6em;
+    height: 1.6em;
+  }
+  
+  .show-more-btn:active {
+    box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+    transform: translate(0.1em, 0.1em);
+  }
+
 .main-btn {
     color: black;
     background-color: seagreen;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: 600;
     display: inline-block;
     padding: 0.9375em 2.1875em;
     letter-spacing: 1px;
-    border-radius: 19px;
+    border-radius: 16px;
     margin-bottom: 40px;
     transition: 0.7s ease;
 }
 .main-btn:hover{
     background-color: #ffffff;
-    transform: scale(1.1, 1.1);
+    transform: scale(1.1);
 }
 
+
+.additional-info {
+    color: #000;
+    background: seagreen;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    max-width: 600px;
+}
+
+.additional-info p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.additional-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.additional-info li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    padding: 5px 0;
+    transition: transform 0.3s ease;
+}
+
+.additional-info li:hover {
+    transform: translateX(10px);
+}
+
+/* From Uiverse.io by ferlagher */ 
+
+
+/*.show-more-btn {
+    background-color: seagreen;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.show-more-btn:hover {
+    background-color: #1a653f;
+    transform: scale(1.05);
+}*/
 
 
 .icons-container {
@@ -465,3 +550,4 @@ section {
         font-size: 1.8em;
     }
 }
+

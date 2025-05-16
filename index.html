@@ -27,8 +27,20 @@
         <div>
             
             <h2>Hello, I'm Mahmoud<br><span>Web-Developer,Frontend</pr></span></h2>
-            <h3>I can enhance how customers perceive your business
-            </h3>
+            <h3>I can enhance how customers perceive your business, </h3>
+            <div class="additional-info" id="more-info" style="display: none;">
+                <p>With over 3 years of experience in web development, I specialize in:</p>
+                <ul>
+                    <li>through modern web design, responsive layouts, and engaging user experiences. Let's create something amazing together!</li>
+                    <li>✨ Responsive Web Design</li>
+                    <li>🎨 Modern UI/UX Implementation</li>
+                    <li>⚡ Performance Optimization</li>
+                    <li>🔧 Clean and Maintainable Code</li>
+                    <li>📱 Cross-browser Compatibility</li>
+                </ul>
+            </div>
+            <button class="show-more-btn" onclick="toggleMore()">Show More</button>
+            
             <a href="#projects" class="main-btn">view my work</a>
             
             <div class="icons-container">
@@ -185,6 +197,21 @@
     <!--<script>
         document.getElementById('year').textContent = new Date().getFullYear();
       </script>-->
+
+    <script>
+        function toggleMore() {
+            const moreInfo = document.getElementById('more-info');
+            const btn = document.querySelector('.show-more-btn');
+            
+            if (moreInfo.style.display === 'none') {
+                moreInfo.style.display = 'block';
+                btn.textContent = 'Show Less';
+            } else {
+                moreInfo.style.display = 'none';
+                btn.textContent = 'Show More';
+            }
+        }
+    </script>
 
 </body>
 </html>

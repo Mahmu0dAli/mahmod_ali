@@ -59,7 +59,7 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(images/1746918219084.png) no-repeat;
+    background: url(images/1747513766220.png) no-repeat;
     background-size: cover;
 	background-position: center;
 	background-attachment: scroll;
@@ -207,44 +207,24 @@ section {
     transform: translateX(10px);
 }
 
-/* From Uiverse.io by ferlagher */ 
-
-
-/*.show-more-btn {
-    background-color: seagreen;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 15px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.show-more-btn:hover {
-    background-color: #1a653f;
-    transform: scale(1.05);
-}*/
-
 
 .icons-container {
     display: -webkit-box;
-    gap: 20px; /* مسافة بين الأيقونات */
-    flex-wrap: wrap; /* في حالة عدم وجود مساحة كافية */
+    gap: 20px; 
+    flex-wrap: wrap; 
     justify-content: center;
 }
 
 .icons-container a {
     color: seagreen; 
-    font-size: 2rem; /* حجم الأيقونات */
+    font-size: 2rem; 
     transition: all 0.3s ease;
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px; /* زوايا مدورة */
+    border-radius: 10px; 
     background: white; /* خلفية بيضاء */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ظل خفيف */
 }
@@ -296,6 +276,9 @@ section {
     transform: scale(1.8);
     
 }
+.cards {
+    background-color: #81FADB;
+}
 
 .title {
     display: flex;
@@ -344,7 +327,7 @@ section {
     margin: 10px;
 }
 .projects {
-    background-color: #81FADB;
+    background-color: #fff;
 }
 .projects .content{
     margin-top: 30px;

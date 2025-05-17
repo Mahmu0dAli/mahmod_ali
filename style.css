@@ -34,6 +34,9 @@ header {
     font-size: 1.5em;
 
 }
+.logo span {
+    color: #BF0426;
+}
 
 .navigation a{
     color: #2e8b57;
@@ -44,7 +47,7 @@ header {
 }
 
 .navigation a:hover {
-    color: #0000ff;
+    color: #BF0426;
 }
 
 section {
@@ -173,6 +176,7 @@ section {
 }
 .main-btn:hover{
     background-color: #ffffff;
+    border: 1px solid rgb(7, 126, 59);
     transform: scale(1.1);
 }
 
@@ -377,7 +381,7 @@ section {
 
 }
 .more-details:hover {
-    color: #0000ff;
+    color: #BF0426;
 }
 
 .content .icon {

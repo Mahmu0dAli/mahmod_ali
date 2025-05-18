@@ -406,6 +406,9 @@ section {
     display: flex;
     justify-content: space-between;
 }
+#year {
+    color: #BF0426;
+}
 
 .footer-title {
     font-size: 1.3em;

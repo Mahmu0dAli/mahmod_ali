@@ -285,6 +285,7 @@ section {
 }
 
 .title {
+    
     display: flex;
     justify-content: center;
     color: seagreen;
@@ -293,12 +294,16 @@ section {
     margin-bottom: 30px;
 
 }
+
 .content {
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     
+}
+.Contact .title {
+    color: #BF0426;
 }
 
 .card {

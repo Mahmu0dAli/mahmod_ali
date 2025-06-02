@@ -79,7 +79,7 @@ section {
     /*text-shadow: 4px 4px 7px #14e6d4;*/
 }
 
-.main h2 {
+/*.main h2 {
     color: #070707;
     text-shadow: 
         0 0 5px #fff,
@@ -107,12 +107,12 @@ section {
         text-shadow: none;
         box-shadow: none;
     }
-}
+}*/
 
 .main h2 span {
     display: inline-block;
     margin-top: 10px;
-    color: #2e8b57;
+    color: black;
     font-size: 1.4em;
     font-weight: 500;
     text-shadow: 4px 4px 7px rgb(248, 245, 245);

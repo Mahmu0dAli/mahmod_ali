@@ -229,16 +229,16 @@ section {
     justify-content: center;
     align-items: center;
     border-radius: 10px; 
-    background: white; /* خلفية بيضاء */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ظل خفيف */
+    background: #ececec; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
 .icons-container a:hover {
-    transform: translateY(-5px); /* حركة عند التحويم */
+    transform: translateY(-5px); 
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-        /* ألوان محددة لكل أيقونة */
+
         .fa-linkedin:hover { 
             color: #0A66C2 !important; 
             text-shadow: 0 2px 4px rgba(10, 102, 194, 0.3);
@@ -281,7 +281,7 @@ section {
     
 }
 .cards {
-    background-color: #81FADB;
+    background-color: #b7bbb9;
 }
 
 .title {
@@ -400,9 +400,9 @@ section {
     font-size: 1.3em;
 }
 .footer {
-    background-color: #81FADB;
+    background-color: #ffffff;
     color: #000000;
-    padding: 2em;
+    padding: 1em;
     display: flex;
     justify-content: space-between;
 }
@@ -415,11 +415,10 @@ section {
     font-weight: 600;
 }
 .footer .icons-container a{
-    font-size: 1.3em;
+    font-size: 1.6em;
 
 }
 
-/* Media Queries for Responsive Design */
 
 
 @media (max-width: 1200px) {

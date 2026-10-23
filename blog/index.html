@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Blog | Mahmoud</title>
+    <title>Tech Blog | Mahmoud Ali</title>
+    <meta name="description" content="Articles by Mahmoud Ali about frontend development, Tailwind CSS, AI-assisted workflows and modern web technologies.">
+    <link rel="icon" type="image/png" href="../image/favicon.png">
     <link rel="stylesheet" href="../style.css">
     <style>
         body {
+            display: block;
             background-color: #f8fafc;
             color: #1e293b;
             line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: clamp(1rem, 4vw, 2rem);
+        }
+        /* تعطيل تنسيق السايدبار العام القادم من style.css */
+        header.blog-header {
+            position: static;
+            width: auto;
+            height: auto;
+            background: none;
+            overflow: visible;
+            z-index: auto;
         }
         .blog-header {
-            padding: 2rem 0;
+            padding: clamp(1.5rem, 4vw, 2rem) 0;
             text-align: center;
+        }
+        .blog-header h1 {
+            font-size: clamp(1.6rem, 2.5vw + 0.9rem, 2.2rem);
         }
         .btn-back {
             display: inline-block;
@@ -27,10 +42,19 @@
         }
         article {
             background: white;
-            padding: 2rem;
+            padding: clamp(1.25rem, 3vw, 2rem);
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
+        }
+        article h2 {
+            font-size: clamp(1.2rem, 1.8vw + 0.8rem, 1.6rem);
+        }
+        .post-meta {
+            color: #64748b;
+        }
+        .post-body {
+            margin-top: 1rem;
         }
     </style>
 </head>
@@ -43,14 +67,14 @@
     <main>
         <article>
             <h2>The Future of Frontend Development</h2>
-            <p style="color: #64748b;">Posted on July 25, 2025</p>
-            <p style="margin-top: 1rem;">As frontend technologies evolve, we are seeing a massive shift towards more intelligent, AI-assisted development workflows. From component generation to automated testing, the role of a frontend developer is becoming more about architectural oversight and less about boilerplate code.</p>
+            <p class="post-meta">Posted on July 25, 2025</p>
+            <p class="post-body">As frontend technologies evolve, we are seeing a massive shift towards more intelligent, AI-assisted development workflows. From component generation to automated testing, the role of a frontend developer is becoming more about architectural oversight and less about boilerplate code.</p>
         </article>
 
         <article>
             <h2>Why I Use Tailwind CSS</h2>
-            <p style="color: #64748b;">Posted on July 20, 2025</p>
-            <p style="margin-top: 1rem;">Tailwind CSS has completely changed how I approach responsive design. By utilizing utility-first classes, I can maintain consistency across large projects while significantly reducing the amount of custom CSS required.</p>
+            <p class="post-meta">Posted on July 20, 2025</p>
+            <p class="post-body">Tailwind CSS has completely changed how I approach responsive design. By utilizing utility-first classes, I can maintain consistency across large projects while significantly reducing the amount of custom CSS required.</p>
         </article>
     </main>
 </body>

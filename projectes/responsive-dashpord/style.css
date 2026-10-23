@@ -34,10 +34,18 @@ body {
     width: 60px;
     height: 100vh;
     padding: 20px;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     transition: .4s;
 }
-.menu:hover{
+/* التوسّع بالمرور على الأجهزة التي تدعمه فقط */
+@media (hover: hover) {
+    .menu:hover{
+        width: 260px;
+    }
+}
+/* التوسّع باللمس أو التركيز (جوال / لوحة مفاتيح) */
+.menu:focus-within{
     width: 260px;
 }
 ul{
@@ -76,6 +84,7 @@ ul li a i{
 }
 .content{
     width: 100%;
+    box-sizing: border-box;
 }
 .title-info{
     background-color: #0481ff;
@@ -140,4 +149,71 @@ th{
     background-color: #f6fa17;
     color: rgb(0, 0, 0);
     font-weight: bold;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .table-wrap {
+        overflow-x: auto;
+        margin: 0 10px 20px;
+    }
+    table {
+        width: max-content;
+        min-width: 520px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* القائمة تصبح عمودًا ثابتًا فوق المحتوى، وتتوسع عند اللمس */
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .content {
+        padding-left: 100px; /* عرض القائمة المطوية: 60 + حشوة 20×2 */
+    }
+
+    .title-info {
+        font-size: 14px;
+    }
+
+    .data-info {
+        margin: 10px;
+    }
+
+    .data-info .box {
+        flex-basis: 100%;
+        height: 110px;
+    }
+
+    .data-info .box i {
+        font-size: 32px;
+    }
+
+    .data-info .box .data span {
+        font-size: 24px;
+    }
+
+    td, th {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 420px) {
+    .content {
+        padding-left: 100px;
+    }
+
+    .data-info .box {
+        height: 100px;
+    }
+
+    .data-info .box i {
+        font-size: 26px;
+    }
 }

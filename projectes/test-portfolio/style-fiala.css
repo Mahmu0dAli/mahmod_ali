@@ -229,7 +229,7 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('image/backgruond.jpg') center/cover no-repeat;
+  background: url('image/backgruond.webp') center/cover no-repeat;
   z-index: 0; 
 }
 

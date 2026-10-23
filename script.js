@@ -1,13 +1,5 @@
-// Mobile Navigation Toggle (for responsive design)
+// Update active nav link on scroll
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-    }
-
-    // Update active nav link on scroll
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -15,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
             if (scrollY >= (sectionTop - 100)) {
                 current = section.getAttribute('id');
             }
@@ -30,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.addEventListener('scroll', updateActiveNavLink);
+    updateActiveNavLink();
 
     // Typewriter Effect
     const typewriterText = "I'm a passionate frontend developer, specialized in creating interactive and engaging web experiences using the latest technologies.";
@@ -123,22 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Read more toggle for project description paragraph only
-    const readMoreButtons = document.querySelectorAll('.read-more-btn');
-    readMoreButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const projectContent = this.closest('.project-content');
-            if (!projectContent) return;
-
-            const moreText = projectContent.querySelector('.more-text');
-            if (!moreText) return;
-
-            const isHidden = moreText.style.display === 'none' || moreText.style.display === '';
-            moreText.style.display = isHidden ? 'inline' : 'none';
-            this.textContent = isHidden ? ' Read less' : 'More Details ';
-        });
-    });
-
     // Animate Skill Bars on Scroll
     const skillBars = document.querySelectorAll('.skill-progress');
 
@@ -159,25 +135,27 @@ document.addEventListener('DOMContentLoaded', function() {
         animateSkillBars.observe(bar);
     });
 
-    // Contact Form Submission
+    // Contact Form Submission (يفتح تطبيق البريد لدى الزائر عبر mailto)
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Simple form validation
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            if (name && email && subject && message) {
-                // In a real application, you would send the form data to a server here
-                alert('Thank you for your message, ' + name + '! I will get back to you as soon as possible.');
-                this.reset();
-            } else {
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !subject || !message) {
                 alert('Please fill in all fields before submitting.');
+                return;
             }
+
+            const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+            const mailtoLink = `mailto:el7oda.official@hotmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            window.location.href = mailtoLink;
+            this.reset();
         });
     }
 
